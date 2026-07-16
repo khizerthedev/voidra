@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://voidra.com/sitemap.xml
+Host: https://voidra.com
