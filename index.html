@@ -3,59 +3,363 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SouthGrid Shop — Premium Streetwear in Pakistan</title>
-<meta name="description" content="Discover SouthGrid streetwear in Pakistan with premium essentials, bold tees, and limited releases built for confident everyday style." />
-<link rel="canonical" href="https://southgrid.store/shop.html" />
+<title>SouthGrid — Premium Streetwear in Pakistan</title>
+<meta name="description" content="SouthGrid delivers premium streetwear in Pakistan with bold essentials, limited drops, and minimalist tees designed for modern everyday style." />
+<link rel="canonical" href="https://southgrid.store/index.html" />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0a0a0b" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="SouthGrid" />
-<meta property="og:title" content="SouthGrid Shop — Premium Streetwear in Pakistan" />
-<meta property="og:description" content="Discover SouthGrid streetwear in Pakistan with premium essentials, bold tees, and limited releases built for confident everyday style." />
-<meta property="og:url" content="https://southgrid.store/shop.html" />
+<meta property="og:title" content="SouthGrid — Premium Streetwear in Pakistan" />
+<meta property="og:description" content="SouthGrid delivers premium streetwear in Pakistan with bold essentials, limited drops, and minimalist tees designed for modern everyday style." />
 <meta property="og:image" content="https://southgrid.store/southgridlogo.png" />
+<meta property="og:url" content="https://southgrid.store/index.html" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@southgrid.pk" />
-<meta name="twitter:title" content="SouthGrid Shop — Premium Streetwear in Pakistan" />
-<meta name="twitter:description" content="Discover SouthGrid streetwear in Pakistan with premium essentials, bold tees, and limited releases built for confident everyday style." />
+<meta name="twitter:title" content="SouthGrid — Premium Streetwear in Pakistan" />
+<meta name="twitter:description" content="SouthGrid delivers premium streetwear in Pakistan with bold essentials, limited drops, and minimalist tees designed for modern everyday style." />
+<meta name="twitter:image" content="https://southgrid.store/southgridlogo.png" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0b'/%3E%3Cpath d='M50 14 Q57 44 88 50 Q57 56 50 86 Q43 56 12 50 Q43 44 50 14 Z' fill='%23f5f5f2'/%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800;900&family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
   :root{
-    --void:#0a0a0b; --void-2:#141416; --void-3:#1d1d20; --ink:#f5f5f2; --ink-dim:#c2c2be; --steel:#8c8c91; --line:rgba(245,245,242,0.12); --line-strong:rgba(245,245,242,0.26); --whatsapp:#25d366; --font-display:'Unbounded', sans-serif; --font-mono:'Space Mono', monospace; --font-body:'Manrope', sans-serif; --container:1240px;
+    --void:#0a0a0b;
+    --void-2:#141416;
+    --void-3:#1d1d20;
+    --ink:#f5f5f2;
+    --ink-dim:#c2c2be;
+    --steel:#8c8c91;
+    --line:rgba(245,245,242,0.12);
+    --line-strong:rgba(245,245,242,0.26);
+    --whatsapp:#25d366;
+    --whatsapp-dark:#1ea952;
+    --font-display:'Unbounded', sans-serif;
+    --font-mono:'Space Mono', monospace;
+    --font-body:'Manrope', sans-serif;
+    --container:1240px;
   }
+ 
   *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
   html{ scroll-behavior:smooth; background:var(--void); }
-  body{ background:var(--void); color:var(--ink); font-family:var(--font-body); line-height:1.5; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  body{
+    background:var(--void);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
   img{ max-width:100%; display:block; }
   a{ color:inherit; text-decoration:none; }
   button{ font-family:inherit; cursor:pointer; background:none; border:none; color:inherit; }
+  ul{ list-style:none; }
+  input,select,textarea{ font-family:inherit; }
+ 
   .wrap{ max-width:var(--container); margin:0 auto; padding:0 32px; }
-  .eyebrow{ font-family:var(--font-mono); font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--steel); display:inline-flex; align-items:center; gap:10px; }
-  .btn{ font-family:var(--font-mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; padding:13px 20px; border-radius:2px; border:1px solid transparent; display:inline-flex; align-items:center; justify-content:center; gap:10px; transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease; white-space:nowrap; }
+ 
+  ::selection{ background:var(--ink); color:var(--void); }
+ 
+  :focus-visible{
+    outline:2px solid var(--ink);
+    outline-offset:3px;
+  }
+ 
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--steel);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:'';
+    width:14px; height:1px;
+    background:var(--line-strong);
+  }
+ 
+  .btn{
+    font-family:var(--font-mono);
+    font-size:13px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    padding:16px 30px;
+    border-radius:2px;
+    border:1px solid transparent;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    transition:transform .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+    white-space:nowrap;
+  }
   .btn-primary{ background:var(--ink); color:var(--void); }
-  .btn-primary:hover{ transform:translateY(-1px); background:#fff; }
-  header.nav{ position:fixed; top:0; left:0; right:0; z-index:100; padding:22px 0; transition:background .35s ease, padding .35s ease, border-color .35s ease, backdrop-filter .35s ease; border-bottom:1px solid transparent; }
-  header.nav.scrolled{ padding:14px 0; background:rgba(10,10,11,0.82); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-color:var(--line); }
+  .btn-primary:hover{ transform:translateY(-2px); background:#fff; }
+  .btn-ghost{ border-color:var(--line-strong); color:var(--ink); }
+  .btn-ghost:hover{ border-color:var(--ink); background:rgba(245,245,242,0.05); }
+  .btn-full{ width:100%; }
+  .btn:disabled{ opacity:0.35; cursor:not-allowed; transform:none !important; }
+ 
+  /* ===== reveal-on-scroll ===== */
+  .reveal{ opacity:0; transform:translateY(28px); transition:opacity .8s ease, transform .8s ease; }
+  .reveal.in-view{ opacity:1; transform:translateY(0); }
+ 
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+    html{ scroll-behavior:auto; }
+    .reveal{ opacity:1; transform:none; }
+  }
+ 
+  /* ===================== NAV ===================== */
+  header.nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    padding:22px 0;
+    transition:background .35s ease, padding .35s ease, border-color .35s ease, backdrop-filter .35s ease;
+    border-bottom:1px solid transparent;
+  }
+  header.nav.scrolled{
+    padding:14px 0;
+    background:rgba(10,10,11,0.82);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-color:var(--line);
+  }
   .nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:24px; }
   .nav-logo img{ height:50px; width:auto; }
   .nav-links{ display:flex; gap:38px; }
-  .nav-links a{ font-family:var(--font-mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-dim); position:relative; padding:4px 0; transition:color .25s ease; }
-  .nav-links a::after{ content:''; position:absolute; left:0; bottom:0; height:1px; width:0; background:var(--ink); transition:width .3s ease; }
+  .nav-links a{
+    font-family:var(--font-mono); font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--ink-dim); position:relative; padding:4px 0;
+    transition:color .25s ease;
+  }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:0; height:1px; width:0;
+    background:var(--ink); transition:width .3s ease;
+  }
   .nav-links a:hover{ color:var(--ink); }
   .nav-links a:hover::after{ width:100%; }
-  .nav-actions{ display:flex; align-items:center; gap:16px; }
+  .nav-actions{ display:flex; align-items:center; gap:22px; }
   .icon-btn{ position:relative; display:flex; align-items:center; justify-content:center; width:28px; height:28px; }
   .icon-btn svg{ width:22px; height:22px; }
-  .cart-count{ position:absolute; top:-8px; right:-10px; background:var(--ink); color:var(--void); font-family:var(--font-mono); font-size:10px; font-weight:700; width:17px; height:17px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+  .cart-count{
+    position:absolute; top:-8px; right:-10px;
+    background:var(--ink); color:var(--void);
+    font-family:var(--font-mono); font-size:10px; font-weight:700;
+    width:17px; height:17px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    transform:scale(0); transition:transform .25s ease;
+  }
+  .cart-count.show{ transform:scale(1); }
   .burger{ display:none; flex-direction:column; gap:5px; width:24px; background:none; border:none; cursor:pointer; }
-  .burger span{ display:block; height:1px; width:100%; background:var(--ink); }
-  .mobile-menu{ position:fixed; inset:0; z-index:101; background:var(--void); display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:28px; padding:32px 40px; transform:translateY(-100%); transition:transform .45s ease; }
+  .burger span{ height:1px; width:100%; background:var(--ink); }
+ 
+  .mobile-menu{
+    position:fixed; inset:0; z-index:101;
+    background:var(--void);
+    display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:28px;
+    padding:32px 40px;
+    transform:translateY(-100%);
+    transition:transform .45s ease;
+  }
   .mobile-menu.open{ transform:translateY(0); }
   .mobile-menu a{ font-family:var(--font-display); font-size:32px; font-weight:800; text-transform:uppercase; }
   .mobile-menu .close-mobile{ position:absolute; top:26px; right:28px; }
-  .shop{ padding:110px 0 90px; }
+ 
+  @media (max-width:900px){
+    .nav-links{ display:none; }
+    .burger{ display:flex; }
+  }
+ 
+  /* ===================== HERO ===================== */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    display:flex; align-items:center;
+    padding:150px 0 90px;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse 60% 50% at 82% 20%, rgba(245,245,242,0.05), transparent 60%),
+      var(--void);
+  }
+  .hero-inner{
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:40px; align-items:center; width:100%;
+  }
+  .hero-copy .eyebrow{ margin-bottom:26px; }
+  .hero-copy h1{
+    font-family:var(--font-display); font-weight:900; text-transform:uppercase;
+    font-size:clamp(46px, 7vw, 92px); line-height:0.98; letter-spacing:-0.01em;
+  }
+  .hero-copy h1 span{ display:block; }
+  .hero-copy h1 .thin{ -webkit-text-stroke:1.5px var(--ink); color:transparent; }
+  .hero-copy p.lede{
+    margin-top:26px; max-width:440px; color:var(--ink-dim); font-size:17px;
+  }
+  .hero-ctas{ display:flex; gap:16px; margin-top:40px; flex-wrap:wrap; }
+ 
+  .hero-visual{ position:relative; display:flex; justify-content:center; align-items:center; }
+  .hero-visual .frame{
+    position:relative; width:min(100%, 380px);
+    border:1px solid var(--line); border-radius:4px;
+    background:var(--void-2);
+    padding:18px;
+  }
+  .hero-visual .frame img{ border-radius:2px; width:100%; }
+  .hero-visual .frame::before{
+    content:''; position:absolute; inset:-1px;
+    border-radius:4px;
+    background:linear-gradient(160deg, rgba(245,245,242,0.15), transparent 40%);
+    pointer-events:none;
+  }
+  .hero-tag{
+    position:absolute; bottom:-18px; left:-18px;
+    background:var(--ink); color:var(--void);
+    font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em;
+    padding:10px 14px; border-radius:2px;
+    display:flex; flex-direction:column; gap:2px;
+  }
+  .hero-tag b{ font-size:13px; }
+ 
+  .sparkle-signature{
+    position:absolute; top:-40px; right:-10px; width:150px; height:150px;
+    z-index:2; pointer-events:none;
+  }
+  .sparkle-signature .streak{
+    position:absolute; left:50%; top:50%; width:1.5px;
+    background:linear-gradient(to top, transparent, rgba(245,245,242,0.5), transparent);
+    transform-origin:bottom center;
+    animation:streak-flicker 3.2s ease-in-out infinite;
+  }
+  .sparkle-signature .core{
+    position:absolute; left:50%; top:50%; width:64px; height:64px;
+    transform:translate(-50%,-50%) rotate(-8deg);
+    animation:sparkle-twinkle 3.2s ease-in-out infinite;
+    transform-origin:center;
+  }
+  @keyframes sparkle-twinkle{
+    0%,100%{ transform:translate(-50%,-50%) rotate(-8deg) scale(1); opacity:1; }
+    50%{ transform:translate(-50%,-50%) rotate(-8deg) scale(0.85); opacity:0.75; }
+  }
+  @keyframes streak-flicker{
+    0%,100%{ opacity:0.15; }
+    50%{ opacity:0.55; }
+  }
+ 
+  .scroll-cue{
+    position:absolute; bottom:36px; left:32px;
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--font-mono); font-size:11px; letter-spacing:0.16em; color:var(--steel);
+  }
+  .scroll-cue svg{ width:14px; height:14px; animation:bob 1.8s ease-in-out infinite; }
+  @keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(5px);} }
+ 
+  @media (max-width:900px){
+    .hero{ padding:100px 0 60px; }
+    .hero-inner{ grid-template-columns:1fr; gap:26px; }
+    .hero-copy{ text-align:left; }
+    .hero-copy h1{ font-size:clamp(36px, 9vw, 60px); line-height:1.02; }
+    .hero-copy p.lede{ margin:24px 0 0; max-width:460px; font-size:16px; }
+    .hero-ctas{ justify-content:flex-start; }
+    .hero-visual{ order:-1; margin-bottom:12px; }
+    .hero-visual .frame{ width:min(86vw, 340px); }
+    .hero-tag{ left:-18px; transform:none; bottom:-14px; }
+    .scroll-cue{ display:none; }
+  }
+  @media (max-width:640px){
+    .hero{ padding:80px 0 48px; }
+    .hero-copy h1{ font-size:clamp(30px, 10vw, 48px); }
+    .hero-copy p.lede{ font-size:15px; }
+    .hero-ctas{ gap:12px; }
+    .hero-visual .frame{ width:min(92vw, 300px); padding:14px; }
+    .hero-tag{ padding:8px 12px; font-size:10px; letter-spacing:0.12em; }
+    .btn{ padding:14px 24px; font-size:12px; }
+  }
+ 
+  /* ===================== MARQUEE ===================== */
+  .marquee{
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    overflow:hidden; white-space:nowrap; padding:18px 0;
+    background:var(--void-2);
+  }
+  .marquee-track{ display:inline-flex; animation:marquee 26s linear infinite; }
+  .marquee-track span{
+    font-family:var(--font-mono); font-size:13px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--ink-dim); padding:0 26px; display:inline-flex; align-items:center; gap:26px;
+  }
+  @keyframes marquee{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
+ 
+  /* ===================== SECTION SHELL ===================== */
+  section{ padding:130px 0; }
+  .section-head{ margin-bottom:64px; max-width:640px; }
+  .section-head h2{
+    font-family:var(--font-display); text-transform:uppercase; font-weight:900;
+    font-size:clamp(30px, 4.4vw, 52px); line-height:1.04; margin-top:18px;
+  }
+ 
+  /* ===================== SHOP ===================== */
+  .shop{ background:var(--void); }
+  .shop-grid{ display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:start; }
+ 
+  .gallery-stage{
+    background:var(--void-2); border:1px solid var(--line); border-radius:4px;
+    padding:26px; position:relative;
+  }
+  .gallery-stage img{ width:100%; height:auto; border-radius:2px; object-fit:contain; }
+  .gallery-thumbs{ display:flex; gap:12px; margin-top:16px; }
+  .gallery-thumbs button{
+    flex:1; padding:12px; border:1px solid var(--line); border-radius:2px;
+    font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--steel); transition:all .25s ease;
+  }
+  .gallery-thumbs button.active{ border-color:var(--ink); color:var(--ink); background:var(--void-3); }
+ 
+  .pdp-title{ font-family:var(--font-display); font-weight:800; text-transform:uppercase; font-size:clamp(26px,3vw,36px); }
+  .pdp-price{ font-family:var(--font-mono); font-size:22px; margin-top:14px; }
+  .pdp-desc{ color:var(--ink-dim); margin-top:16px; max-width:46ch; }
+  .pdp-divider{ height:1px; background:var(--line); margin:30px 0; }
+ 
+  .pdp-row-label{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--steel);
+    margin-bottom:14px; display:flex; justify-content:space-between; align-items:center;
+  }
+  .size-grid{ display:flex; gap:10px; flex-wrap:wrap; }
+  .size-btn{
+    width:52px; height:48px; border:1px solid var(--line-strong); border-radius:2px;
+    font-family:var(--font-mono); font-size:13px; transition:all .2s ease;
+  }
+  .size-btn:hover{ border-color:var(--ink); }
+  .size-btn.active{ background:var(--ink); color:var(--void); border-color:var(--ink); }
+  .size-hint{ font-size:12px; color:var(--steel); margin-top:10px; }
+  .size-hint.error{ color:#e88; }
+ 
+  .qty-row{ display:flex; align-items:center; gap:16px; }
+  .qty-stepper{ display:flex; align-items:center; border:1px solid var(--line-strong); border-radius:2px; }
+  .qty-stepper button{ width:42px; height:44px; font-size:16px; }
+  .qty-stepper span{ width:36px; text-align:center; font-family:var(--font-mono); }
+ 
+  .pdp-specs{ margin-top:36px; display:flex; flex-direction:column; gap:10px; }
+  .pdp-specs li{
+    font-size:14px; color:var(--ink-dim); display:flex; gap:10px; align-items:flex-start;
+  }
+  .pdp-specs li svg{ width:14px; height:14px; margin-top:3px; flex-shrink:0; color:var(--steel); }
+ 
+  .trust-row{ display:flex; gap:22px; flex-wrap:wrap; margin-top:34px; padding-top:28px; border-top:1px solid var(--line); }
+  .trust-row .item{ display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--steel); }
+  .trust-row svg{ width:16px; height:16px; }
+ 
+  @media (max-width:900px){ .shop-grid{ grid-template-columns:1fr; gap:44px; } }
+ 
+  /* ===================== ABOUT ===================== */
+  .about{ background:var(--void-2); }
+  .about-statement{
+    font-family:var(--font-display); font-weight:800; text-transform:uppercase;
+    font-size:clamp(24px, 3.4vw, 40px); line-height:1.15; max-width:820px;
+  }
+  .about-body{ color:var(--ink-dim); max-width:640px; margin-top:26px; font-size:16px; }
+.shop{ padding:110px 0 90px; margin-top: auto; }
   .section-head{ margin-bottom:36px; max-width:640px; }
   .section-head h2{ font-family:var(--font-display); text-transform:uppercase; font-weight:900; font-size:clamp(28px,4vw,40px); line-height:1.05; margin-top:12px; }
   .section-copy{ margin-top:12px; color:var(--ink-dim); max-width:45ch; }
@@ -64,7 +368,7 @@
   .search-shell input{ flex:1; background:transparent; border:none; color:var(--ink); font-size:14px; outline:none; }
   .search-shell input::placeholder{ color:var(--steel); }
   .shop-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:24px; justify-content:center; }
-  .product-card{ background:var(--void-2); border:1px solid var(--line); border-radius:6px; padding:14px; }
+  .product-card{ background:var(--void-2); border:1px solid var(--line); border-radius:6px; padding:14px; margin-top: 50px; }
   .product-card.is-hidden{ display:none; }
   .shop-empty{ margin-top:18px; padding:20px; border:1px dashed var(--line); border-radius:6px; color:var(--ink-dim); text-align:center; font-size:14px; }
   .product-card img{ border-radius:4px; aspect-ratio:1/1; object-fit:cover; }
@@ -98,26 +402,201 @@
   .cart-empty{ padding:32px 0; color:var(--ink-dim); text-align:center; font-size:14px; }
   .overlay{ position:fixed; inset:0; background:rgba(0,0,0,0.58); z-index:110; opacity:0; pointer-events:none; transition:opacity .25s ease; }
   .overlay.show{ opacity:1; pointer-events:auto; }
-  footer{ padding:40px 0 34px; }
-  @media (max-width:900px){
-    .shop-grid{ grid-template-columns:repeat(2, 1fr); }
-    .wrap{ padding:0 20px; }
-    .nav-links{ display:none; }
-    .burger{ display:flex; }
+  @media (max-width:760px){ .pillars{ grid-template-columns:1fr; } }
+ 
+  /* ===================== TESTIMONIALS ===================== */
+  .testimonials{ background:var(--void); }
+  .testimonials-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+  .testimonial-card{
+    border:1px solid var(--line); border-radius:4px; padding:28px;
+    background:linear-gradient(180deg, rgba(245,245,242,0.03), rgba(245,245,242,0.015));
   }
+  .testimonial-card .stars{ color:var(--ink); letter-spacing:0.16em; font-size:13px; margin-bottom:16px; }
+  .testimonial-card p{ color:var(--ink-dim); font-size:15px; line-height:1.7; }
+  .testimonial-card .author{ margin-top:22px; font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--steel); }
+  @media (max-width:900px){ .testimonials-grid{ grid-template-columns:1fr; } }
+ 
+  /* ===================== CLOSING CTA ===================== */
+  .closing{ background:var(--void-2); text-align:center; }
+  .closing h2{
+    font-family:var(--font-display); font-weight:900; text-transform:uppercase;
+    font-size:clamp(32px,6vw,64px); line-height:1;
+  }
+  .closing p{ color:var(--steel); margin-top:20px; }
+  .closing-actions{ display:flex; gap:18px; justify-content:center; margin-top:38px; flex-wrap:wrap; }
+
+  /* ===================== FAQ ===================== */
+  .faq{ background:var(--void); padding-top:20px; }
+  .faq-grid{ display:grid; gap:14px; margin-top:28px; }
+  .faq-item{ border:1px solid var(--line); border-radius:4px; padding:20px 22px; background:linear-gradient(180deg, rgba(245,245,242,0.03), rgba(245,245,242,0.015)); }
+  .faq-item h3{ font-family:var(--font-mono); font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink); margin-bottom:8px; }
+  .faq-item p{ color:var(--steel); font-size:15px; line-height:1.7; }
+ 
+  /* ===================== FOOTER ===================== */
+  footer{ padding:80px 0 34px; border-top:1px solid var(--line); }
+  .footer-top{ display:flex; justify-content:space-between; gap:60px; flex-wrap:wrap; padding-bottom:60px; }
+  .footer-brand img{ height:60px; margin-bottom:18px; }
+  .footer-brand p{ color:var(--steel); font-size:13.5px; max-width:280px; }
+  .footer-cols{ display:flex; gap:70px; flex-wrap:wrap; }
+  .footer-col h4{ font-family:var(--font-mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--steel); margin-bottom:18px; }
+  .footer-col a, .footer-col span{ display:block; font-size:14.5px; margin-bottom:12px; color:var(--ink-dim); transition:color .2s ease; }
+  .footer-col a:hover{ color:var(--ink); }
+  .footer-bottom{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    padding-top:28px; border-top:1px solid var(--line);
+    font-family:var(--font-mono); font-size:11.5px; color:var(--steel); letter-spacing:0.04em;
+  }
+ 
+  @media (max-width:640px){
+    section{ padding:90px 0; }
+    .wrap{ padding:0 22px; }
+    .footer-top{ flex-direction:column; gap:40px; }
+  }
+ 
+  /* ===================== WHATSAPP FLOAT ===================== */
+  .whatsapp-float{
+    position:fixed; bottom:26px; right:26px; z-index:90;
+    width:58px; height:58px; border-radius:50%;
+    background:var(--whatsapp);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 24px rgba(0,0,0,0.4);
+    transition:transform .25s ease, background .25s ease;
+  }
+  .whatsapp-float:hover{ transform:scale(1.08); background:var(--whatsapp-dark); }
+  .whatsapp-float svg{ width:29px; height:29px; fill:#fff; }
+  .whatsapp-float .pulse{
+    position:absolute; inset:0; border-radius:50%;
+    border:2px solid var(--whatsapp);
+    animation:pulse-ring 2.4s ease-out infinite;
+  }
+  @keyframes pulse-ring{
+    0%{ transform:scale(1); opacity:0.7; }
+    100%{ transform:scale(1.7); opacity:0; }
+  }
+  @media (max-width:640px){
+    .whatsapp-float{ width:52px; height:52px; bottom:18px; right:18px; }
+    .whatsapp-float svg{ width:26px; height:26px; }
+  }
+ 
+  /* ===================== CART DRAWER ===================== */
+  .overlay{
+    position:fixed; inset:0; background:rgba(10,10,11,0.7);
+    backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px);
+    z-index:199; opacity:0; pointer-events:none; transition:opacity .35s ease;
+  }
+  .overlay.show{ opacity:1; pointer-events:auto; }
+ 
+  .cart-drawer{
+    position:fixed; top:0; right:0; bottom:0; z-index:200;
+    width:min(420px, 100vw);
+    background:var(--void); border-left:1px solid var(--line);
+    display:flex; flex-direction:column;
+    transform:translateX(100%); transition:transform .4s cubic-bezier(.4,0,.2,1);
+  }
+  .cart-drawer.open{ transform:translateX(0); }
+  .cart-head{ display:flex; justify-content:space-between; align-items:center; padding:26px 28px; border-bottom:1px solid var(--line); }
+  .cart-head h3{ font-family:var(--font-mono); font-size:13px; letter-spacing:0.14em; text-transform:uppercase; }
+  .cart-items{ flex:1; overflow-y:auto; padding:20px 28px; display:flex; flex-direction:column; gap:22px; }
+  .cart-empty{ text-align:center; padding:60px 20px; color:var(--steel); display:flex; flex-direction:column; align-items:center; gap:18px; }
+  .cart-empty svg{ width:38px; height:38px; opacity:0.5; }
+ 
+  .cart-item{ display:flex; gap:14px; }
+  .cart-item img{ width:64px; height:76px; object-fit:cover; border-radius:2px; border:1px solid var(--line); }
+  .cart-item-info{ flex:1; }
+  .cart-item-info .name{ font-size:14.5px; font-weight:600; }
+  .cart-item-info .meta{ font-family:var(--font-mono); font-size:11.5px; color:var(--steel); margin-top:4px; }
+  .cart-item-controls{ display:flex; align-items:center; justify-content:space-between; margin-top:10px; }
+  .mini-stepper{ display:flex; align-items:center; gap:10px; border:1px solid var(--line-strong); border-radius:2px; }
+  .mini-stepper button{ width:26px; height:26px; font-size:14px; }
+  .mini-stepper span{ font-family:var(--font-mono); font-size:12px; width:16px; text-align:center; }
+  .remove-btn{ color:var(--steel); font-size:12px; text-decoration:underline; }
+  .remove-btn:hover{ color:var(--ink); }
+  .cart-item-price{ font-family:var(--font-mono); font-size:13px; }
+ 
+  .cart-foot{ padding:24px 28px 30px; border-top:1px solid var(--line); }
+  .cart-subtotal{ display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:15px; margin-bottom:18px; }
+ 
+  /* ===================== CHECKOUT MODAL ===================== */
+  .modal{
+    position:fixed; top:50%; left:50%; z-index:300;
+    transform:translate(-50%,-46%); opacity:0; pointer-events:none;
+    width:min(560px, calc(100vw - 40px)); max-height:88vh; overflow-y:auto;
+    background:var(--void-2); border:1px solid var(--line-strong); border-radius:6px;
+    padding:38px;
+    transition:transform .35s ease, opacity .35s ease;
+  }
+  .modal.show{ opacity:1; pointer-events:auto; transform:translate(-50%,-50%); }
+  .modal-head{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:26px; }
+  .modal-head h3{ font-family:var(--font-display); font-weight:800; text-transform:uppercase; font-size:24px; }
+ 
+  .order-recap{ background:var(--void); border:1px solid var(--line); border-radius:4px; padding:16px 18px; margin-bottom:26px; font-size:13.5px; }
+  .order-recap-row{ display:flex; justify-content:space-between; padding:6px 0; color:var(--ink-dim); }
+  .order-recap-row.total{ border-top:1px solid var(--line); margin-top:6px; padding-top:12px; color:var(--ink); font-weight:700; }
+ 
+  .field{ margin-bottom:18px; }
+  .field label{ display:block; font-family:var(--font-mono); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:var(--steel); margin-bottom:8px; }
+  .field input, .field select, .field textarea{
+    width:100%; background:var(--void); border:1px solid var(--line-strong); border-radius:2px;
+    padding:13px 14px; color:var(--ink); font-size:14.5px; transition:border-color .2s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{ border-color:var(--ink); outline:none; }
+  .field textarea{ resize:vertical; min-height:70px; }
+  .field-error{ font-size:12px; color:#e88; margin-top:6px; display:none; }
+  .field.invalid input, .field.invalid select{ border-color:#e88; }
+  .field.invalid .field-error{ display:block; }
+  .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:480px){ .field-row{ grid-template-columns:1fr; } }
+ 
+  .payment-note{
+    display:flex; gap:12px; align-items:flex-start;
+    background:var(--void); border:1px solid var(--line); border-radius:4px;
+    padding:14px 16px; font-size:13px; color:var(--ink-dim); margin-bottom:24px;
+  }
+  .payment-note svg{ width:18px; height:18px; flex-shrink:0; margin-top:1px; color:var(--steel); }
+ 
+  .order-success{ text-align:center; padding:30px 10px; }
+  .order-success svg{ width:46px; height:46px; color:var(--whatsapp); margin:0 auto 20px; }
+  .order-success h3{ font-family:var(--font-display); text-transform:uppercase; font-size:22px; margin-bottom:10px; }
+  .order-success p{ color:var(--steel); font-size:14px; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://southgrid.store/#organization",
+      "name": "SouthGrid",
+      "url": "https://southgrid.store",
+      "logo": "https://southgrid.store/southgridlogo.png",
+      "sameAs": [
+        "https://instagram.com/southgrid.pk"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://southgrid.store",
+      "name": "SouthGrid",
+      "publisher": {
+        "@id": "https://southgrid.store/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
-
+ 
+<!-- ===================== NAV ===================== -->
 <header class="nav" id="siteNav">
   <div class="wrap nav-inner">
-    <a href="index.html" class="nav-logo"><img src="southgridlogo.png" alt="SouthGrid" /></a>
+    <a href="#top" class="nav-logo"><img src="southgridlogo.png" alt="SouthGrid" /></a>
     <nav class="nav-links">
       <a href="shop.html">Shop</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#drops">Reviews</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#drops">Reviews</a>
+      <a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
       <button class="icon-btn" id="cartBtn" aria-label="Open cart">
@@ -125,14 +604,12 @@
         <span class="cart-count" id="cartCount">0</span>
       </button>
       <button class="burger" id="burgerBtn" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
-
+ 
 <div class="mobile-menu" id="mobileMenu">
   <button class="icon-btn close-mobile" id="closeMobile" aria-label="Close menu">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -143,23 +620,133 @@
   <a href="index.html#drops">Reviews</a>
   <a href="index.html#contact">Contact</a>
 </div>
-
-<div style="height:86px"></div>
-
-<section class="shop">
+ 
+<!-- ===================== HERO ===================== -->
+<div id="top"></div>
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">SouthGrid — Estd. 2026 — Pakistan</p>
+      <h1>
+        <span>Streetwear</span>
+        <span class="thin">Redefined.</span>
+      </h1>
+      <p class="lede">Premium streetwear engineered in Pakistan. Every piece is designed with intention, built to last, and made to be worn every day.</p>
+      <div class="hero-ctas">
+        <a href="shop.html" class="btn btn-primary">Shop The Drop</a>
+        <a href="#about" class="btn btn-ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="sparkle-signature" aria-hidden="true">
+        <svg class="core" viewBox="0 0 100 100"><path d="M50 4 Q58 45 96 50 Q58 55 50 96 Q42 55 4 50 Q42 45 50 4 Z" fill="#f5f5f2"/></svg>
+        <div class="streak" style="height:70px; transform:rotate(0deg) translateY(-70px); animation-delay:0s;"></div>
+        <div class="streak" style="height:52px; transform:rotate(45deg) translateY(-52px); animation-delay:.4s;"></div>
+        <div class="streak" style="height:60px; transform:rotate(90deg) translateY(-60px); animation-delay:.8s;"></div>
+        <div class="streak" style="height:48px; transform:rotate(135deg) translateY(-48px); animation-delay:1.2s;"></div>
+        <div class="streak" style="height:65px; transform:rotate(180deg) translateY(-65px); animation-delay:1.6s;"></div>
+        <div class="streak" style="height:50px; transform:rotate(225deg) translateY(-50px); animation-delay:2s;"></div>
+        <div class="streak" style="height:58px; transform:rotate(270deg) translateY(-58px); animation-delay:2.4s;"></div>
+        <div class="streak" style="height:46px; transform:rotate(315deg) translateY(-46px); animation-delay:2.8s;"></div>
+      </div>
+      <div class="frame">
+        <img src="f1-black-tee.png" alt="SouthGrid streetwear tee with bold graphic detail" />
+        <div class="hero-tag">Latest Arrivals<b>Now in stock</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+  </div>
+</section>
+ 
+<!-- ===================== MARQUEE ===================== -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>
+      <span>Everyday Essentials</span><span>✦</span>
+      <span>Premium Oversized</span><span>✦</span>
+      <span>Nationwide Shipping</span><span>✦</span>
+      <span>Built To Last</span><span>✦</span>
+    </span>
+    <span>
+      <span>Everyday Essentials</span><span>✦</span>
+      <span>Premium Oversized</span><span>✦</span>
+      <span>Nationwide Shipping</span><span>✦</span>
+      <span>Built To Last</span><span>✦</span>
+    </span>
+  </div>
+</div>
+ 
+<!-- ===================== SHOP ===================== -->
+<section class="shop" id="shop">
   <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">SouthGrid Shop</p>
-      <h2>Premium Streetwear Essentials</h2>
-      <p class="section-copy">Explore SouthGrid’s latest pieces in Pakistan — from bold graphic tees to clean everyday staples built for comfort and standout style.</p>
+    <div class="section-head reveal">
+      <p class="eyebrow">Featured Piece</p>
+      <h2>New Arrival</h2>
     </div>
-
-    <div class="search-shell">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2"/></svg>
-      <input id="shopSearch" type="text" placeholder="Search products..." autocomplete="off" />
-    </div>
-
+ 
     <div class="shop-grid">
+      <div class="reveal">
+        <div class="gallery-stage">
+          <img id="pdpImage" src="f1-tee.png" alt="Oversized graphic tee in premium streetwear styling" />
+        </div>
+
+      </div>
+ 
+      <div class="reveal">
+        <h3 class="pdp-title">New - F1 MotorSport Tee</h3>
+        <p class="pdp-price">PKR 2,399</p>
+        <p class="pdp-desc">Built for speed. Inspired by motorsport. Made from premium heavyweight cotton with a clean, comfortable fit for everyday wear.</p>
+ 
+        <div class="pdp-divider"></div>
+ 
+        <div class="pdp-row-label"><span>Size</span><span id="sizeSelectedLabel"></span></div>
+        <div class="size-grid" id="sizeGrid">
+          <button type="button" class="size-btn" data-size="S">S</button>
+          <button type="button" class="size-btn" data-size="M">M</button>
+          <button type="button" class="size-btn" data-size="L">L</button>
+          <button type="button" class="size-btn" data-size="XL">XL</button>
+          <button type="button" class="size-btn" data-size="XXL">2XL</button>
+        </div>
+        <p class="size-hint" id="sizeHint">Runs oversized by design — size down for a slimmer fit.</p>
+ 
+        <div class="pdp-divider"></div>
+ 
+        <div class="pdp-row-label"><span>Quantity</span></div>
+        <div class="qty-row">
+          <div class="qty-stepper">
+            <button type="button" id="qtyMinus" aria-label="Decrease quantity">−</button>
+            <span id="qtyValue">1</span>
+            <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+          </div>
+          <button class="btn btn-primary" id="addToCartBtn" style="flex:1;">Add To Cart</button>
+        </div>
+ 
+        <ul class="pdp-specs">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Oversized, drop-shoulder cut</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Screen-printed graphics, not vinyl</li>
+        </ul>
+ 
+        <div class="trust-row">
+          <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/></svg> Cash on delivery</div>
+          <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h15l3 5H6z"/><path d="M3 7h13v5H3z"/><circle cx="7.5" cy="19.5" r="1.5"/><circle cx="16.5" cy="19.5" r="1.5"/></svg> Nationwide shipping</div>
+          <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 2l4 4-4 4M3 12v-2a4 4 0 0 1 4-4h14M7 22l-4-4 4-4M21 12v2a4 4 0 0 1-4 4H3"/></svg> Easy exchanges</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===================== ABOUT ===================== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <p class="eyebrow reveal">Estd. 2026 — Karachi, Pakistan</p>
+    <p class="about-statement reveal" style="margin-top:20px;">Featured Products</p>
+    <p class="about-body reveal">Premium oversized streetwear crafted with quality fabrics, clean sillhouettes, and timeless design.</p>
+ 
+   <div class="shop-grid">
       <article class="product-card" data-search="oversized tee heavyweight cotton graphic tee streetwear essential">
         <img src="built-in-silence-tee.png" alt="Oversized graphic tee with bold back detail" />
         <h3>Built in Silence Tee</h3>
@@ -192,7 +779,7 @@
             <button class="size-btn" type="button" data-size="L">L</button>
             <button class="size-btn" type="button" data-size="XL">XL</button>
           </div>
-          <button class="btn btn-primary add-to-cart" type="button" data-name="F1 - Motorsport Oversized Tee" data-price="2599" data-img="f1-tee.png">Add To Cart</button>
+          <button class="btn btn-primary add-to-cart" type="button" data-name="Graphic Tee — Front Detail" data-price="3499" data-img="ChatGPT Image Jul 15, 2026, 01_08_34 PM.png">Add To Cart</button>
         </div>
       </article>
 
@@ -210,7 +797,7 @@
             <button class="size-btn" type="button" data-size="L">L</button>
             <button class="size-btn" type="button" data-size="XL">XL</button>
           </div>
-          <button class="btn btn-primary add-to-cart" type="button" data-name="The Radar Oversized Tee" data-price="2399" data-img="offtheradar-tee.png">Add To Cart</button>
+          <button class="btn btn-primary add-to-cart" type="button" data-name="Graphic Tee — Front Detail" data-price="3499" data-img="ChatGPT Image Jul 15, 2026, 01_08_34 PM.png">Add To Cart</button>
         </div>
       </article>
 
@@ -228,36 +815,120 @@
             <button class="size-btn" type="button" data-size="L">L</button>
             <button class="size-btn" type="button" data-size="XL">XL</button>
           </div>
-          <button class="btn btn-primary add-to-cart" type="button" data-name="South Grid Oversized Jersey" data-price="2599" data-img="southgrid-jersey-tee.png">Add To Cart</button>
+          <button class="btn btn-primary add-to-cart" type="button" data-name="Graphic Tee — Front Detail" data-price="3499" data-img="ChatGPT Image Jul 15, 2026, 01_08_34 PM.png">Add To Cart</button>
         </div>
       </article>
     </div>
-    <div class="shop-empty" id="shopNoResults" hidden>No products match your search.</div>
+  </div>
+</section>
+ 
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="testimonials" id="drops">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Voices</p>
+      <h2>What people are saying.</h2>
+    </div>
+    <div class="testimonials-grid reveal">
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“Delivery was quick and sizing was perfectly accurate. Great fit and definitely will order again from SouthGrid.”</p>
+        <div class="author">— Rafiq, Karachi</div>
+      </article>
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“Best quality tees and really comfortable. Loved the designs”</p>
+        <div class="author">— Muhammad, Karachi</div>
+      </article>
+      <article class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“I was amazed with the quality, pehle nahi pata tha what to expect but now will 100% buy again soon.”</p>
+        <div class="author">— Ashar, Islamabad</div>
+      </article>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===================== CLOSING CTA ===================== -->
+<section class="closing" id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Wear the mindset.<br/>Made to stand out.</h2>
+    <p class="reveal">Follow us and get the first access to every drop.</p>
+    <div class="closing-actions reveal">
+      <a href="https://instagram.com/southgrid.pk" target="_blank" rel="noopener" class="btn btn-ghost">Check Out Our Instagram</a>
+      <button class="btn btn-primary" id="closingWhatsapp">Message Us On WhatsApp</button>
+    </div>
   </div>
 </section>
 
+<!-- ===================== FAQ ===================== -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-grid reveal">
+      <div class="faq-item">
+        <h3>How long does delivery take?</h3>
+        <p>Delivery times vary by location, but orders are processed as quickly as possible and shipped nationwide across Pakistan.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I return an item?</h3>
+        <p>Yes, returns are accepted within 5 days of delivery if the item is unworn, unwashed, and has the original tags attached.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What payment methods do you accept?</h3>
+        <p>We accept Cash on Delivery and online payments, depending on what is available for your order.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you offer exchanges?</h3>
+        <p>Yes, exchanges are available for eligible items when the product condition and return window meet our policy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ===================== FOOTER ===================== -->
 <footer>
   <div class="wrap">
-    <div style="display:flex;justify-content:space-between;align-items:center;padding:28px 0;border-top:1px solid rgba(245,245,242,0.12);">
-      <div>
-        <img src="southgridlogo.png" alt="SouthGrid" style="height:50px;" />
-        <p style="color:var(--ink-dim);margin-top:10px;">Redefining Streetwear.</p>
-        <a href="tos.html" style="color:var(--ink-dim);margin-top:10px;display:inline-block;">Terms of Service</a>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="southgridlogo.png" alt="SouthGrid" />
+        <p>Redefining Streetwear.</p>
       </div>
-      <div style="color:var(--ink-dim)">© 2026 SouthGrid</div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="#shop">New Arrivals</a>
+          <a href="shop.html">Shop Products</a>
+        </div>
+        <div class="footer-col">
+          <h4>Brand</h4>
+          <a href="#about">About</a>
+          <a href="tos.html">Terms of Service</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="https://wa.me/923102002079" target="_blank" rel="noopener">WhatsApp: 0310 2002079</a>
+          <a href="https://instagram.com/southgrid.pk" target="_blank" rel="noopener">@southgrid.pk</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SouthGrid. All rights reserved.</span>
+      <span>Cash on delivery available nationwide, Pakistan.</span>
     </div>
   </div>
 </footer>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "url": "https://southgrid.store/shop.html",
-    "name": "SouthGrid Shop",
-    "description": "Discover SouthGrid streetwear in Pakistan with premium essentials, bold tees, and limited releases built for confident everyday style."
-  }
-  </script>
-
+ 
+<!-- ===================== WHATSAPP FLOAT ===================== -->
+<a class="whatsapp-float" id="whatsappFloat" href="https://wa.me/923102002079?text=Hi%20SouthGrid!%20I%20have%20a%20question%20about%20your%20products." target="_blank" rel="noopener" aria-label="Chat with SouthGrid on WhatsApp">
+  <span class="pulse" aria-hidden="true"></span>
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 2C8.83 2 3 7.82 3 15c0 2.63.78 5.08 2.12 7.13L3 30l8.06-2.1A12.9 12.9 0 0 0 16.02 28C23.2 28 29 22.18 29 15S23.2 2 16.02 2zm0 23.6c-2.24 0-4.33-.66-6.08-1.8l-.44-.27-4.78 1.25 1.28-4.66-.29-.48A10.6 10.6 0 0 1 5.4 15c0-5.86 4.77-10.6 10.62-10.6 5.86 0 10.6 4.74 10.6 10.6 0 5.86-4.74 10.6-10.6 10.6zm5.8-7.94c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.72.16-.21.32-.82 1.03-1 1.24-.19.21-.37.24-.69.08-.32-.16-1.34-.5-2.55-1.58-.94-.84-1.58-1.87-1.76-2.19-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.74-.99-2.38-.26-.63-.53-.54-.72-.55-.19-.01-.4-.01-.61-.01-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.65 0 1.56 1.14 3.07 1.3 3.28.16.21 2.24 3.42 5.43 4.8.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.88-.77 2.14-1.51.27-.75.27-1.39.19-1.51-.08-.13-.29-.21-.61-.37z"/></svg>
+</a>
+ 
+<!-- ===================== CART DRAWER ===================== -->
 <div class="overlay" id="cartOverlay"></div>
 <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
   <div class="cart-head">
@@ -269,176 +940,135 @@
   <div class="cart-items" id="cartItems"></div>
   <div class="cart-foot">
     <div class="cart-subtotal"><span>Subtotal</span><span id="cartSubtotal">PKR 0</span></div>
-    <button class="btn btn-primary" id="checkoutBtn">Checkout On WhatsApp</button>
+    <button class="btn btn-primary btn-full" id="checkoutBtn" disabled>Checkout On WhatsApp</button>
   </div>
 </aside>
-
+ 
+<!-- ===================== CHECKOUT MODAL ===================== -->
+<div class="overlay" id="checkoutOverlay"></div>
+<div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Checkout">
+  <div id="checkoutFormWrap">
+    <div class="modal-head">
+      <h3>Confirm Order</h3>
+      <button class="icon-btn" id="closeCheckout" aria-label="Close checkout">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+ 
+    <div class="order-recap" id="orderRecap"></div>
+ 
+    <form id="checkoutForm" novalidate>
+      <div class="field" id="field-name">
+        <label for="custName">Full name</label>
+        <input type="text" id="custName" placeholder="Your full name" />
+        <p class="field-error">Please enter your name.</p>
+      </div>
+      <div class="field-row">
+        <div class="field" id="field-phone">
+          <label for="custPhone">Phone number</label>
+          <input type="tel" id="custPhone" placeholder="03XX XXXXXXX" />
+          <p class="field-error">Enter a valid phone number.</p>
+        </div>
+        <div class="field" id="field-city">
+          <label for="custCity">City</label>
+          <select id="custCity">
+            <option value="">Select city</option>
+            <option>Karachi</option>
+            <option>Lahore</option>
+            <option>Islamabad</option>
+            <option>Rawalpindi</option>
+            <option>Faisalabad</option>
+            <option>Multan</option>
+            <option>Peshawar</option>
+            <option>Quetta</option>
+            <option>Other</option>
+          </select>
+          <p class="field-error">Please select a city.</p>
+        </div>
+      </div>
+      <div class="field" id="field-address">
+        <label for="custAddress">Delivery address</label>
+        <textarea id="custAddress" placeholder="House / street / area"></textarea>
+        <p class="field-error">Please enter your delivery address.</p>
+      </div>
+      <div class="field">
+        <label for="custNotes">Order notes (optional)</label>
+        <textarea id="custNotes" placeholder="Anything we should know?"></textarea>
+      </div>
+ 
+      <div class="payment-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/></svg>
+        <span>Cash on delivery — pay when your order arrives. Tap below to send your order to us on WhatsApp, where we'll confirm the final details.</span>
+      </div>
+ 
+      <button type="submit" class="btn btn-primary btn-full">Send Order Via WhatsApp</button>
+    </form>
+  </div>
+ 
+  <div class="order-success" id="orderSuccess" style="display:none;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 12.5l3 3 5-6"/><circle cx="12" cy="12" r="10"/></svg>
+    <h3>Order Sent</h3>
+    <p>WhatsApp should have opened with your order details. Send the message and we'll confirm shipping shortly.</p>
+    <button class="btn btn-ghost" id="closeSuccess" style="margin-top:24px;">Done</button>
+  </div>
+</div>
+ 
 <script>
-  const $ = (selector) => document.querySelector(selector);
-  const $$ = (selector) => Array.from(document.querySelectorAll(selector));
+(function(){
+  const WHATSAPP_NUMBER = '923102002079';
+  const CART_KEY = 'southgrid_cart';
 
-  const header = $('#siteNav');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 20);
-  });
-
-  const cartBtn = $('#cartBtn');
-  const cartDrawer = $('#cartDrawer');
-  const cartOverlay = $('#cartOverlay');
-  const cartItems = $('#cartItems');
-  const shopSearch = $('#shopSearch');
-  const productCards = $$('.product-card');
-  const noResults = $('#shopNoResults');
-  const cartCount = $('#cartCount');
-  const cartSubtotal = $('#cartSubtotal');
-  const checkoutBtn = $('#checkoutBtn');
-  const closeCartBtn = $('#closeCart');
-
-  function formatMoney(value) {
-    return new Intl.NumberFormat('en-PK', {
-      style: 'currency',
-      currency: 'PKR',
-      maximumFractionDigits: 0
-    }).format(value);
-  }
-
-  function getCart() {
+  function fetchCart() {
     try {
-      return JSON.parse(localStorage.getItem('southgrid_cart')) || [];
+      return JSON.parse(localStorage.getItem(CART_KEY)) || [];
     } catch (error) {
       return [];
     }
   }
 
-  function saveCart(cart) {
-    localStorage.setItem('southgrid_cart', JSON.stringify(cart));
+  function commitCart(cart) {
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    state.cart = cart;
     renderCart();
   }
 
-  function openCart() {
-    cartDrawer.classList.add('open');
-    cartOverlay.classList.add('show');
-  }
-
-  function closeCart() {
-    cartDrawer.classList.remove('open');
-    cartOverlay.classList.remove('show');
-  }
-
-  function addToCart(name, price, img, size = 'M') {
-    const cart = getCart();
-    const existing = cart.find((item) => item.name === name && item.size === size);
-    if (existing) {
-      existing.qty += 1;
-    } else {
-      cart.push({ name, price, img, size, qty: 1 });
+  function updateCartIcon() {
+    const cart = fetchCart();
+    const count = cart.reduce((total, item) => total + item.qty, 0);
+    const badge = document.getElementById('cartCount');
+    if (badge) {
+      badge.textContent = count;
+      badge.classList.toggle('show', count > 0);
     }
-    saveCart(cart);
-    openCart();
   }
-
-  function renderCart() {
-    const cart = getCart();
-    const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-    cartCount.textContent = totalQty;
-    cartCount.style.display = totalQty > 0 ? 'flex' : 'none';
-
-    if (cart.length === 0) {
-      cartItems.innerHTML = '<div class="cart-empty">Your cart is empty. Add a piece to begin.</div>';
-      cartSubtotal.textContent = 'PKR 0';
-      checkoutBtn.disabled = true;
-      return;
+ 
+  const PRODUCT = {
+    id: 'featured-oversized-tee',
+    name: 'Featured Oversized Tee',
+    price: 3499,
+    images: { front: 'ChatGPT Image Jul 15, 2026, 01_08_34 PM.png', back: 'ChatGPT Image Jul 15, 2026, 01_08_34 PM.png' }
+  };
+ 
+  const state = { cart: fetchCart(), size: null, qty: 1, view: 'back' };
+ 
+  window.addEventListener('storage', (event) => {
+    if (event.key === 'southgrid_cart') {
+      state.cart = fetchCart();
+      renderCart();
     }
-
-    cartItems.innerHTML = cart.map((item, index) => `
-      <div class="cart-item">
-        <img src="${item.img}" alt="${item.name}" />
-        <div class="cart-item-info">
-          <div class="name">${item.name}</div>
-          <div class="meta">Size ${item.size || 'M'} · Qty ${item.qty}</div>
-          <div class="cart-item-controls">
-            <div class="mini-stepper">
-              <button type="button" data-action="dec" data-index="${index}">−</button>
-              <span>${item.qty}</span>
-              <button type="button" data-action="inc" data-index="${index}">+</button>
-            </div>
-            <span class="meta">${formatMoney(item.price * item.qty)}</span>
-          </div>
-          <button type="button" class="remove-btn" data-action="remove" data-index="${index}">Remove</button>
-        </div>
-      </div>
-    `).join('');
-
-    const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-    cartSubtotal.textContent = formatMoney(subtotal);
-    checkoutBtn.disabled = false;
-  }
-
-  function filterProducts() {
-    const query = shopSearch.value.trim().toLowerCase();
-    let visibleCount = 0;
-
-    productCards.forEach((card) => {
-      const haystack = (card.dataset.search || '').toLowerCase();
-      const matches = haystack.includes(query) || card.textContent.toLowerCase().includes(query);
-      card.classList.toggle('is-hidden', !matches);
-      if (matches) visibleCount += 1;
-    });
-
-    noResults.hidden = visibleCount !== 0;
-  }
-
-  $$('.product-card').forEach((card) => {
-    const selectButton = card.querySelector('.select-product');
-    const expandPanel = card.querySelector('.product-expand');
-    const sizeButtons = card.querySelectorAll('.size-btn');
-    const addButton = card.querySelector('.add-to-cart');
-
-    selectButton.addEventListener('click', () => {
-      productCards.forEach((otherCard) => {
-        const otherPanel = otherCard.querySelector('.product-expand');
-        if (otherPanel && otherPanel !== expandPanel) {
-          otherPanel.classList.remove('open');
-        }
-      });
-      expandPanel.classList.toggle('open');
-    });
-
-    sizeButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        sizeButtons.forEach((btn) => btn.classList.remove('active'));
-        button.classList.add('active');
-      });
-    });
-
-    addButton.addEventListener('click', () => {
-      const selectedSize = card.querySelector('.size-btn.active')?.dataset.size || 'M';
-      addToCart(addButton.dataset.name, Number(addButton.dataset.price), addButton.dataset.img, selectedSize);
-    });
   });
-
-  shopSearch.addEventListener('input', filterProducts);
-
-  cartItems.addEventListener('click', (event) => {
-    const actionButton = event.target.closest('button[data-action]');
-    if (!actionButton) return;
-
-    const cart = getCart();
-    const index = Number(actionButton.dataset.index);
-    const action = actionButton.dataset.action;
-
-    if (action === 'inc') {
-      cart[index].qty = Math.min(10, cart[index].qty + 1);
-    } else if (action === 'dec') {
-      cart[index].qty = Math.max(1, cart[index].qty - 1);
-      if (cart[index].qty === 0) cart.splice(index, 1);
-    } else if (action === 'remove') {
-      cart.splice(index, 1);
-    }
-
-    saveCart(cart);
-  });
-
+ 
+  const $ = (sel) => document.querySelector(sel);
+  const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+  const money = (n) => 'PKR ' + n.toLocaleString('en-PK');
+ 
+  /* ---------- nav scroll state ---------- */
+  const navEl = $('#siteNav');
+  window.addEventListener('scroll', () => {
+    navEl.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive:true });
+ 
+  /* ---------- mobile menu ---------- */
   const burgerBtn = $('#burgerBtn');
   const mobileMenu = $('#mobileMenu');
   const closeMobile = $('#closeMobile');
@@ -446,27 +1076,236 @@
   burgerBtn.addEventListener('click', () => mobileMenu.classList.add('open'));
   closeMobile.addEventListener('click', () => mobileMenu.classList.remove('open'));
   $$('#mobileMenu a').forEach((link) => link.addEventListener('click', () => mobileMenu.classList.remove('open')));
-
-  cartBtn.addEventListener('click', openCart);
-  closeCartBtn.addEventListener('click', closeCart);
-  cartOverlay.addEventListener('click', closeCart);
-  checkoutBtn.addEventListener('click', () => {
-    const cart = getCart();
-    if (!cart.length) return;
-    const summary = cart.map((item) => `${item.name} × ${item.qty}`).join(', ');
-    const message = `Hello SouthGrid! I’d like to order: ${summary}`;
-    window.open(`https://wa.me/923102002079?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+ 
+  /* ---------- scroll reveal ---------- */
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    $$('.reveal').forEach(el => io.observe(el));
+  } else {
+    $$('.reveal').forEach(el => el.classList.add('in-view'));
+  }
+ 
+  /* ---------- product gallery ---------- */
+  const pdpImage = $('#pdpImage');
+  $$('.thumb-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      $$('.thumb-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.view = btn.dataset.view;
+      pdpImage.src = PRODUCT.images[state.view];
+    });
   });
-
-  window.addEventListener('storage', (event) => {
-    if (event.key === 'southgrid_cart') {
-      renderCart();
+ 
+  /* ---------- size select ---------- */
+  const sizeHint = $('#sizeHint');
+  $$('.size-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      $$('.size-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      state.size = btn.dataset.size;
+      sizeHint.classList.remove('error');
+      sizeHint.textContent = 'Runs oversized by design — size down for a slimmer fit.';
+    });
+  });
+ 
+  /* ---------- quantity ---------- */
+  const qtyValue = $('#qtyValue');
+  $('#qtyMinus').addEventListener('click', () => { state.qty = Math.max(1, state.qty - 1); qtyValue.textContent = state.qty; });
+  $('#qtyPlus').addEventListener('click', () => { state.qty = Math.min(10, state.qty + 1); qtyValue.textContent = state.qty; });
+ 
+  /* ---------- cart core ---------- */
+  const cartItemsEl = $('#cartItems');
+  const cartCountEl = $('#cartCount');
+  const cartSubtotalEl = $('#cartSubtotal');
+  const checkoutBtn = $('#checkoutBtn');
+ 
+  function addToCart() {
+    if (!state.size) {
+      sizeHint.classList.add('error');
+      sizeHint.textContent = 'Pick a size before adding to cart.';
+      $('#sizeGrid').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+      return;
     }
+    const existing = state.cart.find(i => i.size === state.size);
+    if (existing) { existing.qty += state.qty; }
+    else {
+      state.cart.push({ id: PRODUCT.id, name: PRODUCT.name, size: state.size, price: PRODUCT.price, qty: state.qty, img: PRODUCT.images.back });
+    }
+    commitCart(state.cart);
+    renderCart();
+    openCart();
+  }
+  $('#addToCartBtn').addEventListener('click', addToCart);
+ 
+  function renderCart() {
+    const totalQty = state.cart.reduce((s,i) => s + i.qty, 0);
+    cartCountEl.textContent = totalQty;
+    cartCountEl.classList.toggle('show', totalQty > 0);
+ 
+    if (state.cart.length === 0) {
+      cartItemsEl.innerHTML = `
+        <div class="cart-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h2l2.4 12.2a2 2 0 0 0 2 1.8h8.4a2 2 0 0 0 2-1.6L22 8H6"/></svg>
+          <p>Your cart is empty. Let's fix that.</p>
+        </div>`;
+      checkoutBtn.disabled = true;
+    } else {
+      cartItemsEl.innerHTML = state.cart.map((item, idx) => `
+        <div class="cart-item">
+          <img src="${item.img}" alt="${item.name}" />
+          <div class="cart-item-info">
+            <div class="name">${item.name}</div>
+            <div class="meta">SIZE ${item.size}</div>
+            <div class="cart-item-controls">
+              <div class="mini-stepper">
+                <button type="button" data-action="dec" data-idx="${idx}" aria-label="Decrease quantity">−</button>
+                <span>${item.qty}</span>
+                <button type="button" data-action="inc" data-idx="${idx}" aria-label="Increase quantity">+</button>
+              </div>
+              <span class="cart-item-price">${money(item.price * item.qty)}</span>
+            </div>
+            <button type="button" class="remove-btn" data-action="remove" data-idx="${idx}">Remove</button>
+          </div>
+        </div>
+      `).join('');
+      checkoutBtn.disabled = false;
+    }
+    cartSubtotalEl.textContent = money(subtotal());
+  }
+ 
+  cartItemsEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-action]');
+    if (!btn) return;
+    const idx = Number(btn.dataset.idx);
+    const action = btn.dataset.action;
+    if (action === 'inc') state.cart[idx].qty = Math.min(10, state.cart[idx].qty + 1);
+    if (action === 'dec') state.cart[idx].qty = Math.max(1, state.cart[idx].qty - 1);
+    if (action === 'remove') state.cart.splice(idx, 1);
+    renderCart();
   });
-
+ 
+  function subtotal() { return state.cart.reduce((s,i) => s + i.price * i.qty, 0); }
+ 
+  /* ---------- cart drawer open/close ---------- */
+  const cartDrawer = $('#cartDrawer');
+  const cartOverlay = $('#cartOverlay');
+  function openCart(){ cartDrawer.classList.add('open'); cartOverlay.classList.add('show'); }
+  function closeCart(){ cartDrawer.classList.remove('open'); cartOverlay.classList.remove('show'); }
+  $('#cartBtn').addEventListener('click', openCart);
+  $('#closeCart').addEventListener('click', closeCart);
+  cartOverlay.addEventListener('click', closeCart);
+ 
+  /* ---------- checkout modal open/close ---------- */
+  const checkoutModal = $('#checkoutModal');
+  const checkoutOverlay = $('#checkoutOverlay');
+  const checkoutFormWrap = $('#checkoutFormWrap');
+  const orderSuccess = $('#orderSuccess');
+ 
+  function openCheckout(){
+    if (state.cart.length === 0) return;
+    renderRecap();
+    checkoutFormWrap.style.display = 'block';
+    orderSuccess.style.display = 'none';
+    checkoutModal.classList.add('show');
+    checkoutOverlay.classList.add('show');
+    closeCart();
+  }
+  function closeCheckout(){
+    checkoutModal.classList.remove('show');
+    checkoutOverlay.classList.remove('show');
+  }
+  $('#checkoutBtn').addEventListener('click', openCheckout);
+  $('#closeCheckout').addEventListener('click', closeCheckout);
+  checkoutOverlay.addEventListener('click', closeCheckout);
+  $('#closeSuccess').addEventListener('click', closeCheckout);
+ 
+  function renderRecap(){
+    const rows = state.cart.map(i => `
+      <div class="order-recap-row"><span>${i.name} · ${i.size} × ${i.qty}</span><span>${money(i.price*i.qty)}</span></div>
+    `).join('');
+    $('#orderRecap').innerHTML = rows + `<div class="order-recap-row total"><span>Subtotal</span><span>${money(subtotal())}</span></div>`;
+  }
+ 
+  /* ---------- checkout form validation + submit ---------- */
+  const form = $('#checkoutForm');
+  function setInvalid(fieldId, invalid){
+    $('#field-' + fieldId).classList.toggle('invalid', invalid);
+  }
+  function validate(){
+    const name = $('#custName').value.trim();
+    const phone = $('#custPhone').value.trim();
+    const city = $('#custCity').value;
+    const address = $('#custAddress').value.trim();
+ 
+    const nameOk = name.length > 1;
+    const phoneOk = /^[0-9+\s-]{7,15}$/.test(phone);
+    const cityOk = city.length > 0;
+    const addressOk = address.length > 4;
+ 
+    setInvalid('name', !nameOk);
+    setInvalid('phone', !phoneOk);
+    setInvalid('city', !cityOk);
+    setInvalid('address', !addressOk);
+ 
+    return nameOk && phoneOk && cityOk && addressOk;
+  }
+ 
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!validate()) return;
+ 
+    const name = $('#custName').value.trim();
+    const phone = $('#custPhone').value.trim();
+    const city = $('#custCity').value;
+    const address = $('#custAddress').value.trim();
+    const notes = $('#custNotes').value.trim();
+ 
+    const lines = [
+      'New order from southgrid.pk',
+      '',
+      'Items:',
+      ...state.cart.map(i => `- ${i.name} (Size ${i.size}) x${i.qty} — ${money(i.price*i.qty)}`),
+      '',
+      `Subtotal: ${money(subtotal())}`,
+      '',
+      `Name: ${name}`,
+      `Phone: ${phone}`,
+      `City: ${city}`,
+      `Address: ${address}`,
+      notes ? `Notes: ${notes}` : null,
+      '',
+      'Payment: Cash on delivery'
+    ].filter(Boolean).join('\n');
+ 
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines)}`;
+    window.open(url, '_blank');
+ 
+    checkoutFormWrap.style.display = 'none';
+    orderSuccess.style.display = 'block';
+    commitCart([]);
+    state.cart = [];
+    renderCart();
+    form.reset();
+  });
+ 
+  /* ---------- misc whatsapp triggers ---------- */
+  const notifyBtn = $('#notifyBtn');
+  if (notifyBtn) {
+    notifyBtn.addEventListener('click', () => {
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hi SouthGrid! Notify me when Drop 002 launches.')}`, '_blank');
+    });
+  }
+  $('#closingWhatsapp').addEventListener('click', () => {
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hi SouthGrid! I have a question about your products.')}`, '_blank');
+  });
+ 
+  /* ---------- init ---------- */
   renderCart();
-  filterProducts();
+})();
 </script>
-
 </body>
 </html>
+ 
